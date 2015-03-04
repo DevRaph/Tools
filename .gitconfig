@@ -1,0 +1,11 @@
+[user]
+	name = Raphael Pinet
+	email = raphaelpinetpro@gmail.com
+[core]
+	editor = vim
+[color]
+	ui = true
+[color "diff"]
+	meta = blue black bold
+[merge]
+	tool = vimdiff
