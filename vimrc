@@ -66,7 +66,7 @@ nmap <leader>w :w!<cr>
 :set  softtabstop =4
 
 " Use Unix as the standard file type
-:set ffs=unix,dos,mac
+":set ffs=unix,dos,mac
 
 
 
@@ -78,22 +78,33 @@ nmap <leader>w :w!<cr>
 
 " edit on current line
 :set cursorline
-:hi Cursorline ctermbg=lightgrey guibg=#771c1c cterm=none
+":hi Cursorline ctermbg=darkgrey guibg=#771c1c cterm=none
 
-:filetype on
-:set spelllang =eng,fr
-:set spell
-:set spellsuggest =5
+":filetype on
+":set spelllang =eng,fr
+":set spell
+":set spellsuggest =5
 
-iab void (void)
+"iab void (void)
 iab { {}
+iab ( ()
+iab [ []
+iab " ""
+"iab ' ''
+iab ? () ?  :  ;
 iab #i #include
-iab libft "libft/libft.h"
+iab psw "../includes/push_swap.h"
+iab lft "../libft/libft.h"
 iab #d #define
 "iab printf printf("%s\n");
-iab return "return (0)"
+iab ret0 return (0);
+iab imv int main(void)
+iab imc int main(int ac, char **av)
 ":iabrev adn and
-:iab adn and
+iab adn and
+iab ligth light
+iab widht width
+iab lenght length
 
 :autocmd BufNewFile *.txt :write
 :autocmd BufWritePre *.c :normal gg=G
@@ -102,7 +113,6 @@ iab return "return (0)"
 
 " cursor position in last one
 :au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-
 
 
 
